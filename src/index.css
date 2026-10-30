@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,500;0,700;0,800;0,900;1,700;1,900&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. */
+@layer base {
+  :root {
+    --background: 0.2 0.05 260; /* Colorado Blue */
+    --foreground: 0.98 0 0;
+
+    --card: 0.25 0.05 260;
+    --card-foreground: 0.98 0 0;
+
+    --popover: 0.25 0.05 260;
+    --popover-foreground: 0.98 0 0;
+
+    --primary: 0.85 0.15 200; /* Cool Cyan */
+    --primary-foreground: 0.2 0.05 260;
+
+    --secondary: 0.5 0.22 25; /* Colorado Red */
+    --secondary-foreground: 0.98 0 0;
+
+    --muted: 0.3 0.05 260;
+    --muted-foreground: 0.7 0.05 260;
+
+    --accent: 0.5 0.22 25; /* Colorado Red */
+    --accent-foreground: 0.98 0 0;
+
+    --destructive: 0.6 0.2 25;
+    --destructive-foreground: 0.98 0 0;
+
+    --border: 0.3 0.05 260;
+    --input: 0.3 0.05 260;
+    --ring: 0.85 0.15 200;
+
+    --radius: 0.25rem;
+
+    --sidebar-background: 0.2 0.05 260;
+    --sidebar-foreground: 0.98 0 0;
+    --sidebar-primary: 0.85 0.15 200;
+    --sidebar-primary-foreground: 0.2 0.05 260;
+    --sidebar-accent: 0.5 0.22 25;
+    --sidebar-accent-foreground: 0.98 0 0;
+    --sidebar-border: 0.3 0.05 260;
+    --sidebar-ring: 0.85 0.15 200;
+  }
+
+  .dark {
+    --background: 0.2 0.05 260;
+    --foreground: 0.98 0 0;
+
+    --card: 0.25 0.05 260;
+    --card-foreground: 0.98 0 0;
+
+    --popover: 0.25 0.05 260;
+    --popover-foreground: 0.98 0 0;
+
+    --primary: 0.85 0.15 200;
+    --primary-foreground: 0.2 0.05 260;
+
+    --secondary: 0.5 0.22 25;
+    --secondary-foreground: 0.98 0 0;
+
+    --muted: 0.3 0.05 260;
+    --muted-foreground: 0.7 0.05 260;
+
+    --accent: 0.5 0.22 25;
+    --accent-foreground: 0.98 0 0;
+
+    --destructive: 0.6 0.2 25;
+    --destructive-foreground: 0.98 0 0;
+
+    --border: 0.3 0.05 260;
+    --input: 0.3 0.05 260;
+    --ring: 0.85 0.15 200;
+    
+    --sidebar-background: 0.2 0.05 260;
+    --sidebar-foreground: 0.98 0 0;
+    --sidebar-primary: 0.85 0.15 200;
+    --sidebar-primary-foreground: 0.2 0.05 260;
+    --sidebar-accent: 0.5 0.22 25;
+    --sidebar-accent-foreground: 0.98 0 0;
+    --sidebar-border: 0.3 0.05 260;
+    --sidebar-ring: 0.85 0.15 200;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes phone-ring {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+}
+
+.animate-shake {
+  animation: phone-ring 0.3s linear infinite;
+}
